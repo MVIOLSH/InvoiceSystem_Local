@@ -120,13 +120,22 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBoxClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAAEcSURBVGhD1dpLCsJAEATQ3EzvqKfzHoI7nQ5WGCQm8+lP
-        dcGgjot6BVlmKbmX8yjnIj+SRKxiFvv65V3Os5yrXJBHjGIVs9jXNbhgH1Hj5XN7an7/YBxxamQe0Wxj
-        HNFtYhoxbGEYMW2IHKHWHTFCvdNzhFmXxwjzDssCczxiUeSGRzQL3fGIRnEYHpkBhOOREQgNHukB0eGR
-        FhgtHjkC0uORPWgaPFKDX9+TBo8IFHAMSYOXpB4g0LSPUI0HeO+OMkdQ+hEtQNoRPTC6ESMgmhEzkPAR
-        GoCwEZrF7iMsCt1GWBaZjzAvKDHr8MAj6l2eeEStMwKPTHdH4pFhAwMe6bYw4ZFmEyMeObUx45G/xvSv
-        GqR/2SPx6zbL7QPAtjlTVukzIQAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAARxJREFUaEPV2ksKwkAQBNDcTO+op/MegjudDlYYJCbz6U91waCOi3oFWWYpuZfz
+        KOciP5JErGIW+/rlXc6znKtckEeMYhWz2Nc1uGAfUePlc3tqfv9gHHFqZB7RbGMc0W1iGjFsYRgxbYgc
+        odYdMUK903OEWZfHCPMOywJzPGJR5IZHNAvd8YhGcRgemQGE45ERCA0e6QHR4ZEWGC0eOQLS45E9aBo8
+        UoNf35MGjwgUcAxJg5ekHiDQtI9QjQd4744yR1D6ES1A2hE9MLoRIyCaETOQ8BEagLARmsXuIywK3UZY
+        FpmPMC8oMevwwCPqXZ54RK0zAo9Md0fikWEDAx7ptjDhkWYTIx45tTHjkb/G9K8apH/ZI/HrNsvtA8C2
+        OVNW6TMhAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="anyStoreBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>295, 17</value>
+  </metadata>
+  <metadata name="anyStore.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="anyStoreBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>117, 17</value>
+  </metadata>
 </root>

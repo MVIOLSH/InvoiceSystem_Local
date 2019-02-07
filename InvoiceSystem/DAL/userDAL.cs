@@ -60,7 +60,7 @@ namespace InvoiceSystem.DAL
 
             try
             {
-                string sql = "INSERT INTO tbl_users (first_name, last_name, email, username, password, contact, address, gender, user_type, added_date, added_by) VALUES (@first_name, @last_name, @email, @username, @password, @contact, @address, @gender, @user_type, @added_date, @added_by)";
+                String sql = "INSERT INTO tbl_users (first_name, last_name, email, username, password, contact, address, gender, user_type, added_date, added_by) VALUES (@first_name, @last_name, @email, @username, @password, @contact, @address, @gender, @user_type, @added_date, @added_by)";
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
                 cmd.Parameters.AddWithValue("@first_name", u.first_name);
@@ -92,7 +92,7 @@ namespace InvoiceSystem.DAL
 
             catch(Exception ex)
             {
-                MessageBox(ex.Message);
+                MessageBox.Show(ex.Message);
             }
 
             finally
@@ -115,7 +115,7 @@ namespace InvoiceSystem.DAL
 
             try
             {
-                string sql = "UPDATE tbl_users SET first_name = @first_name, last_name=@last_name, email=@email, username=@username, password=@password, contact=@contact, address=@address, gender=@gender, user_type=@user_type, added_date=@sdded_date, added_by=@added_by WHERE id=@id";
+                string sql = "UPDATE tbl_users SET first_name = @first_name, last_name=@last_name, email=@email, username=@username, password=@password, contact=@contact, address=@address, gender=@gender, user_type=@user_type, added_date=@added_date, added_by=@added_by WHERE id=@id";
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
                 cmd.Parameters.AddWithValue("@first_name", u.first_name);
@@ -205,6 +205,76 @@ namespace InvoiceSystem.DAL
             return isSuccess;
 
         }
+        #endregion
+        #region Search User using KeyWords
+        public DataTable Search(string keywords)
+        {
+            //Static Method to connect DB.
+            SqlConnection conn = new SqlConnection(myconnstrng);
+
+            DataTable dt = new DataTable();
+
+            try
+            {
+                //SQL Query to get data from DB
+                string sql = "SELECT * FROM tbl_users WHERE id LIKE'%"+keywords+ "%'  OR first_name LIKE'%" + keywords + "%' OR last_name LIKE'%" + keywords + "%'OR email LIKE'%" + keywords + "%' OR username LIKE'%" + keywords + "%' OR contact LIKE'%" + keywords + "%' OR address LIKE'%" + keywords + "%'";
+                //Executing CMD
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                //Getting data from DB
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                //DB Conn open
+                conn.Open();
+                //Fill data in our DB
+                adapter.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+            return dt;
+
+        }
+        #endregion
+        #region Getting user ID from user name
+        public userBLL GetIDFromUSername (string username)
+        {
+            userBLL u = new userBLL();
+            SqlConnection conn = new SqlConnection(myconnstrng);
+            DataTable dt = new DataTable();
+
+            try
+            {
+                string sql = "SELECT id FROM tbl_users WHERE username= '" + username + "'";
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+
+                adapter.Fill(dt);
+                if(dt.Rows.Count>0)
+                {
+                    u.id = int.Parse(dt.Rows[0]["id"].ToString());
+
+                }
+            }
+
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+
+            finally
+            {
+                conn.Close();
+            }
+            return u;
+        }
+
+
         #endregion
     }
 }

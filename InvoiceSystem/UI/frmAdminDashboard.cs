@@ -20,7 +20,7 @@ namespace InvoiceSystem
 
         private void frmAdminDashboard_Load(object sender, EventArgs e)
         {
-
+            lblLogedInUser.Text = frmLogin.loggedIn;
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -38,10 +38,29 @@ namespace InvoiceSystem
 
         }
 
-        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+       
+        private void usersToolStripMenu1Item_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void usersToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             frmUsers user = new frmUsers();
             user.Show();
+        }
+
+        private void frmAdminDashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.Show();
+            this.Hide();
+        }
+
+        private void categoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCategories cat = new frmCategories();
+            cat.Show();
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace InvoiceSystem.UI
+﻿using System;
+
+namespace InvoiceSystem.UI
 {
     partial class frmUsers
     {
@@ -77,9 +79,9 @@
             // pictureBoxClose
             // 
             this.pictureBoxClose.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxClose.Image")));
-            this.pictureBoxClose.Location = new System.Drawing.Point(942, 3);
+            this.pictureBoxClose.Location = new System.Drawing.Point(963, 9);
             this.pictureBoxClose.Name = "pictureBoxClose";
-            this.pictureBoxClose.Size = new System.Drawing.Size(55, 47);
+            this.pictureBoxClose.Size = new System.Drawing.Size(22, 23);
             this.pictureBoxClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxClose.TabIndex = 2;
             this.pictureBoxClose.TabStop = false;
@@ -184,7 +186,7 @@
             // 
             // txtContact
             // 
-            this.txtContact.Location = new System.Drawing.Point(85, 446);
+            this.txtContact.Location = new System.Drawing.Point(85, 351);
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(162, 20);
             this.txtContact.TabIndex = 12;
@@ -193,7 +195,7 @@
             // 
             this.lblContact.AutoSize = true;
             this.lblContact.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContact.Location = new System.Drawing.Point(5, 449);
+            this.lblContact.Location = new System.Drawing.Point(5, 351);
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(55, 17);
             this.lblContact.TabIndex = 11;
@@ -201,7 +203,7 @@
             // 
             // txtAdress
             // 
-            this.txtAdress.Location = new System.Drawing.Point(85, 348);
+            this.txtAdress.Location = new System.Drawing.Point(85, 407);
             this.txtAdress.Multiline = true;
             this.txtAdress.Name = "txtAdress";
             this.txtAdress.Size = new System.Drawing.Size(162, 65);
@@ -211,7 +213,7 @@
             // 
             this.lbladdress.AutoSize = true;
             this.lbladdress.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbladdress.Location = new System.Drawing.Point(5, 351);
+            this.lbladdress.Location = new System.Drawing.Point(5, 407);
             this.lbladdress.Name = "lbladdress";
             this.lbladdress.Size = new System.Drawing.Size(57, 17);
             this.lbladdress.TabIndex = 13;
@@ -287,6 +289,7 @@
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.Size = new System.Drawing.Size(576, 475);
             this.dgvUsers.TabIndex = 21;
+            this.dgvUsers.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvUsers_RowHeaderMouseClick);
             // 
             // txtSearch
             // 
@@ -294,6 +297,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(498, 20);
             this.txtSearch.TabIndex = 23;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // lblSearch
             // 
@@ -327,6 +331,7 @@
             this.btnUpdate.TabIndex = 25;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -338,6 +343,7 @@
             this.btnDelete.TabIndex = 26;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // frmUsers
             // 
@@ -376,6 +382,7 @@
             this.Name = "frmUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Users";
+            this.Load += new System.EventHandler(this.frmUsers_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
@@ -383,6 +390,16 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void lblTop_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
