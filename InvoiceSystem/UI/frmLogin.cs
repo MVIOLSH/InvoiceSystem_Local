@@ -94,5 +94,10 @@ namespace InvoiceSystem.UI
                 MessageBox.Show("Login Failed. Try again");
             }
         }
+
+        private void lblFooter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -46,7 +46,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.cmbUserType);
             this.panel1.Controls.Add(this.txtUser);
@@ -62,7 +62,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnLogin.BackColor = System.Drawing.Color.DarkRed;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -150,13 +150,14 @@
             // lblFooter
             // 
             this.lblFooter.AutoSize = true;
-            this.lblFooter.Font = new System.Drawing.Font("Papyrus", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFooter.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFooter.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblFooter.Location = new System.Drawing.Point(125, 505);
+            this.lblFooter.Location = new System.Drawing.Point(113, 504);
             this.lblFooter.Name = "lblFooter";
-            this.lblFooter.Size = new System.Drawing.Size(208, 21);
+            this.lblFooter.Size = new System.Drawing.Size(226, 22);
             this.lblFooter.TabIndex = 1;
-            this.lblFooter.Text = "Developed By Michal Szymanski";
+            this.lblFooter.Text = "Designed By Michal Szymanski";
+            this.lblFooter.Click += new System.EventHandler(this.lblFooter_Click);
             // 
             // pictureBox1
             // 
@@ -173,7 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(469, 535);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblFooter);

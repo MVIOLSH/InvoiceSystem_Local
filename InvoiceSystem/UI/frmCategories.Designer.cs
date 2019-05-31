@@ -45,23 +45,24 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.dgvCategories = new System.Windows.Forms.DataGridView();
+            this.anyStoreBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.anyStore = new InvoiceSystem.AnyStore();
             this.anyStoreBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.anyStoreBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anyStoreBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.anyStore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.anyStoreBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.anyStoreBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel1.BackColor = System.Drawing.Color.DarkRed;
             this.panel1.Controls.Add(this.pictureBoxClose);
             this.panel1.Controls.Add(this.lblTop);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(997, 50);
@@ -146,8 +147,9 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.BackColor = System.Drawing.Color.DarkRed;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnDelete.Location = new System.Drawing.Point(740, 590);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(162, 54);
@@ -157,8 +159,9 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnUpdate.BackColor = System.Drawing.Color.DarkRed;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnUpdate.Location = new System.Drawing.Point(382, 590);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(162, 54);
@@ -168,8 +171,9 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAdd.BackColor = System.Drawing.Color.DarkRed;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnAdd.Location = new System.Drawing.Point(58, 590);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(162, 54);
@@ -204,6 +208,11 @@
             this.dgvCategories.Size = new System.Drawing.Size(576, 475);
             this.dgvCategories.TabIndex = 30;
             // 
+            // anyStoreBindingSource1
+            // 
+            this.anyStoreBindingSource1.DataSource = this.anyStore;
+            this.anyStoreBindingSource1.Position = 0;
+            // 
             // anyStore
             // 
             this.anyStore.DataSetName = "AnyStore";
@@ -213,11 +222,6 @@
             // 
             this.anyStoreBindingSource.DataSource = this.anyStore;
             this.anyStoreBindingSource.Position = 0;
-            // 
-            // anyStoreBindingSource1
-            // 
-            this.anyStoreBindingSource1.DataSource = this.anyStore;
-            this.anyStoreBindingSource1.Position = 0;
             // 
             // frmCategories
             // 
@@ -246,9 +250,9 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anyStoreBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.anyStore)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.anyStoreBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.anyStoreBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

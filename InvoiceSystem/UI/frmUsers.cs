@@ -137,24 +137,33 @@ namespace InvoiceSystem.UI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            u.id = Convert.ToInt32(txtUserId.Text);
-
-            bool success = dal.Delete(u);
-
-            if (success == true)
+            if (u.id  > 0 )
             {
-                MessageBox.Show("User succesfully Deleted");
-                clear();
-            }
 
+                u.id = Convert.ToInt32(txtUserId.Text);
+
+                bool success = dal.Delete(u);
+
+                if (success == true)
+                {
+                    MessageBox.Show("User succesfully Deleted");
+                    clear();
+                }
+
+                else
+                {
+                    MessageBox.Show("Failed to Delete the user");
+                }
+            }
             else
             {
-                MessageBox.Show("Failed to Delete the user");
+                MessageBox.Show("Please choose user to delete");
             }
             //Refreshing Data Grid View
             DataTable dt = dal.Select();
             dgvUsers.DataSource = dt;
         }
+
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {

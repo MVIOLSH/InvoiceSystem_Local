@@ -109,6 +109,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UI\frmUsers.resx">
       <DependentUpon>frmUsers.cs</DependentUpon>
@@ -141,6 +142,15 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background_invoice_gen2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background_invoice_gen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background_invoice_gen3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
